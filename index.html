@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="fill-available">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TypeScript Calculator</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="/src/main.ts"></script>
+    <script
+      src="https://kit.fontawesome.com/8d9ba8ddc1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-[whitesmoke] font-poppins fill-available min-h-screen">
+    <main
+      class="h-screen fill-available flex flex-col gap-1 overflow-hidden relative"
+    >
+      <section
+        class="flex flex-col justify-end gap-4 text-right h-[35vh] p-4 bg-white rounded-b-3xl relative"
+      >
+        <input
+          id="main-screen"
+          type="text"
+          disabled
+          class="font-medium text-2xl bg-transparent text-right"
+          value=""
+        />
+        <div id="preview-screen" class="text-lg font-light"></div>
+
+        <button
+          id="history-toggle"
+          class="absolute left-4 bottom-0 p-3 text-xl active:bg-whitesmoke rounded-lg"
+        >
+          <i class="fa-solid fa-clock-rotate-left"></i>
+        </button>
+      </section>
+
+      <section class="grow grid grid-cols-4 gap-4 p-4 pt-12 text-xl">
+        <button
+          id="button"
+          value="clear"
+          type="button"
+          class="bg-white rounded-lg grid place-content-center"
+        >
+          C
+        </button>
+        <button
+          id="button"
+          value="backspace"
+          type="button"
+          class="bg-white rounded-lg grid place-content-center"
+        >
+          &rightarrow;
+        </button>
+        <button
+          id="button"
+          value="negate"
+          type="button"
+          class="bg-white rounded-lg grid place-content-center"
+        >
+          +/-
+        </button>
+        <button
+          id="button"
+          value="/"
+          type="button"
+          class="bg-white rounded-lg grid place-content-center"
+        >
+          &divide;
+        </button>
+        <button
+          id="button"
+          value="7"
+          type="button"
+          class="bg-white rounded-lg grid place-content-center"
+        >
+          7
+        </button>
+        <button
+          id="button"
+          value="8"
+          type="button"
+          class="bg-white rounded-lg grid place-content-center"
+        >
+          8
+        </button>
+        <button
+          id="button"
+          value="9"
+          type="button"
+          class="bg-white rounded-lg grid place-content-center"
+        >
+          9
+        </button>
+        <button
+          id="button"
+          value="*"
+          type="button"
+          class="bg-white rounded-lg grid place-content-center"
+        >
+          &times;
+        </button>
+        <button
+          id="button"
+          value="4"
+          type="button"
+          class="bg-white rounded-lg grid place-content-center"
+        >
+          4
+        </button>
+        <button
+          id="button"
+          value="5"
+          type="button"
+          class="bg-white rounded-lg grid place-content-center"
+        >
+          5
+        </button>
+        <button
+          id="button"
+          value="6"
+          type="button"
+          class="bg-white rounded-lg grid place-content-center"
+        >
+          6
+        </button>
+        <button
+          id="button"
+          value="-"
+          type="button"
+          class="bg-white rounded-lg grid place-content-center"
+        >
+          &minus;
+        </button>
+        <button
+          id="button"
+          value="1"
+          type="button"
+          class="bg-white rounded-lg grid place-content-center"
+        >
+          1
+        </button>
+        <button
+          id="button"
+          value="2"
+          type="button"
+          class="bg-white rounded-lg grid place-content-center"
+        >
+          2
+        </button>
+        <button
+          id="button"
+          value="3"
+          type="button"
+          class="bg-white rounded-lg grid place-content-center"
+        >
+          3
+        </button>
+        <button
+          id="button"
+          value="+"
+          type="button"
+          class="bg-white rounded-lg grid place-content-center"
+        >
+          &plus;
+        </button>
+        <button
+          id="button"
+          value="."
+          type="button"
+          class="bg-white rounded-lg grid place-content-center"
+        >
+          .
+        </button>
+        <button
+          id="button"
+          value="0"
+          type="button"
+          class="bg-white rounded-lg grid place-content-center"
+        >
+          0
+        </button>
+        <button
+          id="button"
+          value="equals"
+          type="button"
+          class="col-span-2 bg-white rounded-lg grid place-content-center"
+        >
+          =
+        </button>
+      </section>
+
+      <section
+        id="history-section"
+        class="absolute p-4 left-0 bottom-0 w-full h-[65%] bg-[whitesmoke] z-10 overflow-hidden translate-y-full transition-all duration-500"
+      >
+        <ul
+          id="history-list"
+          class="h-full flex flex-col-reverse gap-4 overflow-y-scroll"
+        ></ul>
+      </section>
+    </main>
+  </body>
+</html>
