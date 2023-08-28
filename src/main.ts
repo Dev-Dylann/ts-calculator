@@ -118,7 +118,7 @@ historyToggle.addEventListener("click", () => {
 
 const createListItem = (item: CalculatedExpression): void => {
   const listItem = document.createElement('li')
-  listItem.className = 'flex flex-col gap-1 bg-white p-4 rounded-lg'
+  listItem.className = 'flex flex-col gap-1 bg-white dark:bg-[#333] p-4 rounded-lg'
   historyList.appendChild(listItem)
 
   const expressionSpan = document.createElement('span')

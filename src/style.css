@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-    fill-available {
-        min-height: -webkit-fill-available;
-    }
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+}
+
+html {
+    height: -webkit-fill-available
 }
